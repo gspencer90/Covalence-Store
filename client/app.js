@@ -28,7 +28,7 @@ angular.module('CovalenceStore', ['ngRoute', 'ngResource', 'store.controllers', 
 		controller: 'ContactController'
 	})
 	.when('/cart', {
-		templateUrl: 'views/checkout',
+		templateUrl: 'views/cart',
 		controller: 'CartController'
 	})
 	.otherwise({
