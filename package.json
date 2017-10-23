@@ -1,0 +1,41 @@
+{
+  "name": "covalence-store",
+  "version": "1.0.0",
+  "description": "This is our Covalence Store!",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "source variables && npm run dev",
+    "build:ts": "tsc -p .",
+    "server": "node server/index.js",
+    "dev": "nodemon -e ts --dir server/ --exec \" npm run build:ts && npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gspencer90/Covalence-Store.git"
+  },
+  "author": "Grey, Emily, Stinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gspencer90/Covalence-Store/issues"
+  },
+  "homepage": "https://github.com/gspencer90/Covalence-Store#readme",
+  "dependencies": {
+    "@types/bcrypt": "^1.0.0",
+    "@types/body-parser": "^1.16.5",
+    "@types/express": "^4.0.37",
+    "@types/express-mysql-session": "^1.2.1",
+    "@types/mysql": "0.0.34",
+    "@types/node": "^8.0.46",
+    "@types/stripe": "^4.7.0",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-mysql-session": "^1.2.2",
+    "mysql": "^2.15.0",
+    "stripe": "^5.1.1",
+    "typescript": "^2.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
