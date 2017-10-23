@@ -29,6 +29,14 @@ app.get('*', (req, res, next) => {
 
 app.listen(3000);
 
+export function stateRouting(req: Request, res: Response, next: NextFunction) {
+    if (isServerAsset(req.url)) {
+      next();
+    } else {
+      res.sendFile(path.join(__dirname, "../../client/index.html"));
+    }
+  }
+
 function isServerAsset(path: string) {
     let pieces = path.split('/');
     if (pieces[0] = '/') {
