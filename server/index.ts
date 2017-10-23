@@ -1,11 +1,13 @@
 import * as path from 'path';
 import * as express from 'express';
 import { Request, Response, NextFunction } from 'express';
+let MySQLStore = require("express-mysql-session")(session);
 import * as bodyParser from 'body-parser';
 import * as cookieParser from 'cookie-parser';
 import * as apiRouter from './api';
 import * as configurePassport from './config/passport';
 import * as middleware from './middleware/routing.mw';
+import * as passport from 'passport';
 
 let clientPath = path.join(__dirname, '../client');
 
