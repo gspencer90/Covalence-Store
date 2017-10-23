@@ -7,15 +7,13 @@ declare namespace models {
         password: string,
         role: string;
     }
-    interface ICategory {
-        id: number,
-        name: string,
-        
-    }
     interface IProduct {
         id: number,
         name: string,
-        description: string;
+        imageurl: string,
+        price: number,
+        description: string,
+        categoryid: number;
     }
     interface IPurchase {
         id: number,

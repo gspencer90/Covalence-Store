@@ -1,11 +1,10 @@
 import * as path from 'path';
 import * as express from 'express';
 import { Request, Response, NextFunction } from 'express';
-let MySQLStore = require("express-mysql-session")(session);
 import * as bodyParser from 'body-parser';
 import * as cookieParser from 'cookie-parser';
 import * as apiRouter from './api';
-import * as configurePassport from './config/passport';
+import  configurePassport from './config/passport';
 import * as middleware from './middleware/routing.mw';
 import * as passport from 'passport';
 
@@ -19,6 +18,10 @@ app.use(bodyParser.json());
 
 configurePassport(app);
 
+app.use((req, res, next) => {
+    next();
+});
+
 app.use('/api', apiRouter);
 
 app.get('*', (req, res, next) => {
@@ -29,7 +32,9 @@ app.get('*', (req, res, next) => {
     }
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000, () => {
+    console.log("Listening...")
+});
 
 export function stateRouting(req: Request, res: Response, next: NextFunction) {
     if (isServerAsset(req.url)) {
