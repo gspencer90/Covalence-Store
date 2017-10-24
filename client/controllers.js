@@ -15,8 +15,37 @@ angular.module('store.controllers', ['ngRoute'])
 	
 }])
 
-.controller('CartController', ['$scope', function ($scope){
-	
+.controller('CartController', [
+    '$scope', 
+    'Purchase', 
+    '$location', function ($scope, Purchase, $location){
+    let elements = stripe.elements();
+    let card = elements.create("card");
+    card.mount('#card-field');
+
+    $scope.purchase = function() {
+        stripe.createToken(card)
+        .then(function(result) {
+            if(result.error) {
+                $scope.error = result.error.message;
+            } else {
+                let p = new Purchase({
+                    token: result.token.id,
+                    amount: $scope.amount
+                });
+
+                p.$save(
+                    function() {
+                        alert("Thank you for your purchase! You will receive a summary email shortly!");
+                        $location.path('/');
+                    }, 
+                    function(err) {
+                        $scope.err = err;
+                    }
+                )
+            }
+        })
+    }
 }])
 
 
