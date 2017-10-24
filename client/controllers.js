@@ -1,20 +1,16 @@
 angular.module('store.controllers', ['ngRoute'])
 
-<<<<<<< HEAD
-.controller('ApparelController', ['$scope', function ($scope) {
-=======
 .controller('ApparelController', [
     '$scope', 
     '$location', 
     '$resource', 
     'Product', function ($scope, $location, $resource, Product) {
         // $scope.products = Product.query();
-        let products = Product.query();
+        let products = Products.query();
         $scope.addToCart = function() {
             // cache item to be added
         };
 
->>>>>>> 179131278bcb966572a9446619bdd9b9c70d1879
 }])
 
 .controller('MiscController',['$scope', 'Product', '$routeParams', '$location', function ($scope, Product, $routeParams, $location){
