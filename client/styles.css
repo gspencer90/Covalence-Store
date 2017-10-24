@@ -1,3 +1,4 @@
+/* Welcome Page Styles */
 #mainBackground {
 	height: 900px;
 	width: 1441px;
@@ -20,11 +21,12 @@
 	margin-top: 15px;
 	width: 200px;
 	height: 60px;
-	background-color: #1CBAF8;
-	border: #1CBAF8;
+	background-color: #07b5c6;
+	border: #07b5c6;
 	font-size: 1.3em;
 }
 
+/* Banner Styles */
 #jumboApparel {
 	background: url('images/covalence-store-apparel-hero.jpg') no-repeat fixed;
 	background-size: 1441px 500px;
@@ -39,17 +41,46 @@
 	margin-top: -70px;
 }
 
+/* Nav Styles */
 .my-navbar {
 	background: rgba(27, 37, 40, 0.8);
 }
 
-.img-thumbnail {
+.nav-link {
+	color: #07b5c6;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.nav-link:hover {
+	color: white;
+	transition: 0.5s;
+}
+
+.navbar-toggler {
+	color: white;
+}
+
+/* Merch Styles */
+.figure {
 	height: 321px;
 	width: 350px;
-	margin-right: 40px;
+	margin-right: 20px;
+	margin-bottom: 60px;
+}
+
+.figure-caption {
+	font-size: 1.2em;
+	font-weight: bold;
 }
 
 .merch-container {
-	margin-left: 100px;
-	margin-right: 100px;
+	margin-left: 150px;
+	margin-right: 150px;
 }
+
+#price {
+	margin-top: -28px;
+	color: #07b5c6;
+}
+
