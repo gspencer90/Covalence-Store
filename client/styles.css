@@ -1,0 +1,55 @@
+#mainBackground {
+	height: 900px;
+	width: 1441px;
+	margin-top: -150px;
+	position: fixed;
+	z-index: -1;
+}
+
+.welcomeMessage {
+	color: white;
+	font-size: 3em;
+}
+
+#welcome {
+	margin-top: 200px;
+	margin-left: 300px;
+}
+
+#startBtn {
+	margin-top: 15px;
+	width: 200px;
+	height: 60px;
+	background-color: #1CBAF8;
+	border: #1CBAF8;
+	font-size: 1.3em;
+}
+
+#jumboApparel {
+	background: url('images/covalence-store-apparel-hero.jpg') no-repeat fixed;
+	background-size: 1441px 500px;
+	height: 450px;
+	margin-top: -70px;
+}
+
+#jumboMisc {
+	background: url('images/covalence-store-misc-hero.jpg') no-repeat fixed 0px -20px;
+	background-size: 1441px 500px;
+	height: 450px;
+	margin-top: -70px;
+}
+
+.my-navbar {
+	background: rgba(27, 37, 40, 0.8);
+}
+
+.img-thumbnail {
+	height: 321px;
+	width: 350px;
+	margin-right: 40px;
+}
+
+.merch-container {
+	margin-left: 100px;
+	margin-right: 100px;
+}

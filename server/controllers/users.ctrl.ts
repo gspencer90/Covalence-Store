@@ -62,7 +62,7 @@ router.post('/', (req, res) => {
   })
 })
 
-router.route("/").get(auth.isAdmin, (req, res) => {
+router.route("/").get((req, res) => {
   procedures
     .all()
     .then(users => {
@@ -78,7 +78,7 @@ router.get("/me", (req, res) => {
   res.send(req.user);
 });
 
-router.route("/:id").get(auth.isAdmin, (req, res) => {
+router.route("/:id").get((req, res) => {
   procedures
     .read(req.params.id)
     .then(user => {

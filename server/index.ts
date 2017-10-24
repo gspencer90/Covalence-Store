@@ -3,11 +3,12 @@ import * as express from 'express';
 import { Request, Response, NextFunction } from 'express';
 import * as bodyParser from 'body-parser';
 import * as cookieParser from 'cookie-parser';
-
-import * as apiRouter from './api';
+import apiRouter from './api';
 import configurePassport from './config/passport';
 import * as middleware from './middleware/routing.mw';
 import * as passport from 'passport';
+import stateRouting from './middleware/routing.mw';
+
 
 let clientPath = path.join(__dirname, '../client');
 
@@ -25,38 +26,8 @@ app.use((req, res, next) => {
 
 app.use('/api', apiRouter);
 
-app.get('*', (req, res, next) => {
-    if (isServerAsset(req.url)) {
-        return next();
-    } else {
-        res.sendFile(path.join(clientPath, 'index.html'));
-    }
-});
+app.get('*', stateRouting);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("Listening...")
 });
-
-export function stateRouting(req: Request, res: Response, next: NextFunction) {
-    if (isServerAsset(req.url)) {
-      next();
-    } else {
-      res.sendFile(path.join(__dirname, "../../client/index.html"));
-    }
-  }
-
-function isServerAsset(path: string) {
-    let pieces = path.split('/');
-    if (pieces[0] = '/') {
-        return false;
-    }
-    let last = pieces[pieces.length - 1];
-
-    if (path.indexOf('/api') !== -1 || path.indexOf('/?') !== -1){
-        return true;
-    } else if (last.indexOf('.') !== -1) {
-        return true;
-    } else {
-        return false;
-    }
-}

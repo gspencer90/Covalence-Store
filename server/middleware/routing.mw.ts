@@ -1,7 +1,7 @@
 import { join } from 'path';
 import { Request, Response, NextFunction } from 'express';
 
-export default stateRouting(
+export default function stateRouting(
     req: Request,
     res: Response,
     next: NextFunction
