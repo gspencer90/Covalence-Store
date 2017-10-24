@@ -1,4 +1,4 @@
-import * as express from "express";
+import * as express from 'express';
 import products from './controllers/products.ctrl';
 import purchases from './controllers/purchases.ctrl';
 
