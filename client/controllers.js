@@ -1,13 +1,23 @@
 angular.module('store.controllers', ['ngRoute'])
 
-.controller('ApparelController', ['$scope', function ($scope) {
+.controller('ApparelController', [
+    '$scope', 
+    '$location', 
+    '$resource', 
+    'Product', function ($scope, $location, $resource, Product) {
+        $scope.toApparel() = function() {
+            $location.path('/apparel');
+        };
+        $scope.addToCart = function() {
+            
+        }
 }])
 
 .controller('MiscController', ['$scope', function ($scope){
 	
 }])
 
-.controller('SingleController', ['$scope', 'Product', '$routeParams', function ($scope, Product, $routeParams){
+.controller('SingleController', ['$scope', 'Product', '$routeParams', function ($scope, Product, $routeParams) {
 	$scope.product = Product.get({
         id: $routeParams.id
     })
