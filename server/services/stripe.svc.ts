@@ -7,6 +7,6 @@ export function charge(token: string, amt: number) {
     amount: amt * 100, 
     currency: "usd",
     source: token,
-    description: "MyBlog: Donation"
+    description: "Covalence Store Purchase"
   });
 }
