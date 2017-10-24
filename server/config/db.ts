@@ -2,9 +2,9 @@ import * as mysql from 'mysql';
 
 export let pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'localhost',
-    user: 'slyon_store',
-    password: 'store',
+    host: 'us-cdbr-iron-east-05.cleardb.net',
+    user: 'b5a35611db66ad',
+    password: '6ce8f5d4',
     database: 'CovalenceStore'
 });
 
