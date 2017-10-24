@@ -18,7 +18,8 @@ angular.module('store.controllers', ['ngRoute'])
 .controller('CartController', [
     '$scope', 
     'Purchase', 
-    '$location', function ($scope, Purchase, $location){
+    '$location',
+    'stripe', function ($scope, Purchase, $location, stripe){
     let elements = stripe.elements();
     let card = elements.create("card");
     card.mount('#card-field');
