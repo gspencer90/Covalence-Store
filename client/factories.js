@@ -7,9 +7,7 @@ angular.module('store.factories', ['ngResource'])
 }])
 
 .factory('Misc', ['$resource', function($resource){
-	return $resource('/api/misc/:id', {
-		id: '@id'
-	})
+	return $resource('/api/products/:id')
 }])
 
 .factory('Category', ['$resource', function($resource){

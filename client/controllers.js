@@ -3,10 +3,16 @@ angular.module('store.controllers', ['ngRoute'])
 .controller('ApparelController', ['$scope', function ($scope) {
 }])
 
-.controller('MiscController', ['$scope', function ($scope){
-	
-}])
+.controller('MiscController',['$scope', 'Misc', '$routeParams', '$location', function ($scope, Misc, $routeParams, $location){
+    const id = $routeParams.id;
 
+    $scope.misc = Misc.get()
+
+    $scope.goToSingle = function(){
+        $location.path(`/products/${id}`);
+    }
+    
+}])
 .controller('SingleController', ['$scope', function ($scope){
 	
 }])
