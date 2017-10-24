@@ -4,9 +4,9 @@
 </div>
 </div>
 <div class="merch-container">
-	<figure class="figure" ng-repeat="product in products">
-		<img src="{{ image }}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-		<figcaption class="figure-caption">{{ name }}</figcaption>
-		<figcaption class="figure-caption text-right" id="price">{{ price }}</figcaption>
+	<figure id="" class="figure" ng-repeat="misc in miscs">
+		<img src="{{ product.imageurl }}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+		<figcaption class="figure-caption">{{ product.title }}</figcaption>
+		<figcaption class="figure-caption text-right" id="price">${{ product.price }}</figcaption>
 	</figure>
 </div>
