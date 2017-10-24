@@ -12,9 +12,6 @@ export function destroy(id: number): Promise<void> {
     return empty('DeleteTrans', [id]);
 }
 
-export function newPurchase(
-    price: number, 
-    transid: number
-) {
+export function newPurchase( price: number, transid: number){
     return row("NewPurchase", [price, transid]);
 }

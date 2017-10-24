@@ -1,12 +1,4 @@
 declare namespace models {
-    interface IUser {
-        id: number,
-        firstname: string,
-        lastname: string, 
-        email: string,
-        password: string,
-        role: string;
-    }
     interface IProduct {
         id: number,
         name: string,
