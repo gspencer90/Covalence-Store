@@ -20,7 +20,7 @@ function callProcedure(
         let placeholders = "";
         if (args && args.length > 0) {
           for (let i = 0; i < args.length; i++) {
-            if (i === args.length) {
+            if (i === args.length - 1) {
               placeholders += "?";
             } else {
               placeholders += "?,";

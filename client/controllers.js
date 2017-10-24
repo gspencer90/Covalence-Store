@@ -5,12 +5,12 @@ angular.module('store.controllers', ['ngRoute'])
     '$location', 
     '$resource', 
     'Product', function ($scope, $location, $resource, Product) {
-        $scope.toApparel() = function() {
-            $location.path('/apparel');
-        };
+        // $scope.products = Product.query();
+        let products = Product.query();
         $scope.addToCart = function() {
-            
-        }
+            // cache item to be added
+        };
+
 }])
 
 .controller('MiscController', ['$scope', function ($scope){
