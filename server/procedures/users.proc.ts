@@ -14,7 +14,7 @@ export function newUser(
     email: string,
     password: string
 ) {
-    return row("CreateUser", [firstname, lastname, email, password]);
+    return row("AddUser", [firstname, lastname, email, password]);
 }
 
 export function read(id: number): Promise<models.IUser> {

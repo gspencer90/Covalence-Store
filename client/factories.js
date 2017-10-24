@@ -17,3 +17,9 @@ angular.module('store.factories', ['ngResource'])
 		id: '@id'
 	})
 }])
+
+.factory('Purchase', ['$resource', function($resource) {
+	return $resource('/api/purchases/:id', {
+		id: '@id'
+	})
+}])
