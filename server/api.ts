@@ -1,5 +1,5 @@
 import * as express from "express";
-import products from "./controllers/products.ctrl";
+import products from './controllers/products.ctrl';
 import purchases from './controllers/purchases.ctrl';
 
 let router = express.Router();

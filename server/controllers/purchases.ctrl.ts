@@ -13,7 +13,6 @@
 //         res.sendStatus(500).send(err.message);
 //     })
 // });
-
 import * as express from 'express';
 import * as procedures from '../procedures/purchases.proc'
 
