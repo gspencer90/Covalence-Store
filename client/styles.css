@@ -84,3 +84,17 @@
 	color: #07b5c6;
 }
 
+/* Single View Styles */
+
+.product-img {
+	float: left;
+	margin-left: 100px;
+	margin-top: 50px;
+}
+
+.product-details {
+	float: right;
+	margin-right: 500px;
+	margin-top: 50px;
+}
+

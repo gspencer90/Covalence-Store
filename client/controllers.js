@@ -5,6 +5,14 @@ angular.module('store.controllers', ['ngRoute'])
     '$location', 
     '$resource', 
     'Product', function ($scope, $location, $resource, Product) {
+
+        $scope.toApparel() = function() {
+            $location.path('/apparel');
+        };
+        $scope.addToCart = function() {
+            
+        }
+
         // $scope.products = Product.query();
         let products = Products.query();
         $scope.addToCart = function() {
@@ -12,6 +20,15 @@ angular.module('store.controllers', ['ngRoute'])
         };
 
 }])
+
+
+.controller('SingleController', ['$scope', 'Product', '$routeParams', function ($scope, Product, $routeParams) {
+	$scope.product = Product.get({
+        id: $routeParams.id
+    })
+}])
+
+
 
 .controller('MiscController',['$scope', 'Product', '$routeParams', '$location', function ($scope, Product, $routeParams, $location){
     const id = $routeParams.id;
@@ -22,9 +39,6 @@ angular.module('store.controllers', ['ngRoute'])
     console.log(misc);
     console.log(products);
 
-}])
-.controller('SingleController', ['$scope', function ($scope){
-	
 }])
 
 .controller('ContactController', ['$scope', function ($scope){
@@ -63,7 +77,6 @@ angular.module('store.controllers', ['ngRoute'])
             }
         })
     }
+
 }])
-
-
 
