@@ -13,9 +13,8 @@ export function destroy(id: number): Promise<void> {
 }
 
 export function newPurchase(
-    id: number, 
     price: number, 
     transid: number
 ) {
-    return row("NewPurchase", [id, price, transid]);
+    return row("NewPurchase", [price, transid]);
 }
