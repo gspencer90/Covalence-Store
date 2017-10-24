@@ -1,6 +1,16 @@
 angular.module('store.controllers', ['ngRoute'])
 
-.controller('ApparelController', ['$scope', function ($scope) {
+.controller('ApparelController', [
+    '$scope', 
+    '$location', 
+    '$resource', 
+    'Product', function ($scope, $location, $resource, Product) {
+        $scope.toApparel() = function() {
+            $location.path('/apparel');
+        };
+        $scope.addToCart = function() {
+            
+        }
 }])
 
 .controller('MiscController', ['$scope', function ($scope){

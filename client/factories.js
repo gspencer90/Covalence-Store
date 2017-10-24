@@ -1,13 +1,7 @@
 angular.module('store.factories', ['ngResource'])
 
-.factory('Apparel', ['$resource', function($resource){
-	return $resource('/api/apparel/:id', {
-		id: '@id'
-	})
-}])
-
-.factory('Misc', ['$resource', function($resource){
-	return $resource('/api/misc/:id', {
+.factory('Product', ['$resource', function($resource){
+	return $resource('/api/products/:id', {
 		id: '@id'
 	})
 }])
