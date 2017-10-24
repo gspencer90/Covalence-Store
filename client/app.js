@@ -4,7 +4,7 @@ angular.module('CovalenceStore', ['ngRoute', 'ngResource', 'store.controllers', 
 	$locationProvider.html5Mode(true);
 	$routeProvider
 	.when('/', {
-		templateUrl: 'views/index.html',
+		templateUrl: 'views/welcome.html',
 		controller: 'WelcomeController'
 	})
 	.when('/apparel', {

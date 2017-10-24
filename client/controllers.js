@@ -1,26 +1,21 @@
 angular.module('store.controllers', ['ngRoute'])
 
-.controller('WelcomeController', [{
-
+.controller('ApparelController', ['$scope', function ($scope) {
 }])
 
-.controller('ApparelController', [{
-
-}])
-
-.controller('MiscController', [{
+.controller('MiscController', ['$scope', function ($scope){
 	
 }])
 
-.controller('SingleController', [{
+.controller('SingleController', ['$scope', function ($scope){
 	
 }])
 
-.controller('ContactController', [{
+.controller('ContactController', ['$scope', function ($scope){
 	
 }])
 
-.controller('CartController', [{
+.controller('CartController', ['$scope', function ($scope){
 	
 }])
 
