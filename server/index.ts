@@ -5,7 +5,7 @@ import * as bodyParser from 'body-parser';
 import * as cookieParser from 'cookie-parser';
 
 import * as apiRouter from './api';
-import  configurePassport from './config/passport';
+import configurePassport from './config/passport';
 import * as middleware from './middleware/routing.mw';
 import * as passport from 'passport';
 
