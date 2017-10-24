@@ -1,4 +1,4 @@
-angular.module('store.factories', ['ngResource'])
+angular.module('store.factories', [])
 
 .factory('Product', ['$resource', function($resource){
 	return $resource('/api/products/:id', {

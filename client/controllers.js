@@ -5,22 +5,39 @@ angular.module('store.controllers', ['ngRoute'])
     '$location', 
     '$resource', 
     'Product', function ($scope, $location, $resource, Product) {
+
         $scope.toApparel() = function() {
             $location.path('/apparel');
         };
         $scope.addToCart = function() {
             
         }
+
+        // $scope.products = Product.query();
+        let products = Product.query();
+        $scope.addToCart = function() {
+            // cache item to be added
+        };
+
 }])
 
-.controller('MiscController', ['$scope', function ($scope){
-	
-}])
 
 .controller('SingleController', ['$scope', 'Product', '$routeParams', function ($scope, Product, $routeParams) {
 	$scope.product = Product.get({
         id: $routeParams.id
     })
+}])
+
+
+
+.controller('MiscController',['$scope', 'Product', '$routeParams', '$location', function ($scope, Product, $routeParams, $location){
+    const id = $routeParams.id;
+    
+    let products = Product.query();
+    let misc = products.filter(product => product.categoryid == '2');
+
+    console.log(misc);
+    console.log(products);
 
 }])
 
@@ -60,7 +77,6 @@ angular.module('store.controllers', ['ngRoute'])
             }
         })
     }
+
 }])
-
-
 
