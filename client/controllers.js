@@ -7,8 +7,11 @@ angular.module('store.controllers', ['ngRoute'])
 	
 }])
 
-.controller('SingleController', ['$scope', function ($scope){
-	
+.controller('SingleController', ['$scope', 'Product', '$routeParams', function ($scope, Product, $routeParams){
+	$scope.product = Product.get({
+        id: $routeParams.id
+    })
+
 }])
 
 .controller('ContactController', ['$scope', function ($scope){
