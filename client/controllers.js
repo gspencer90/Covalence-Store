@@ -28,8 +28,6 @@ angular.module('store.controllers', ['ngRoute'])
     })
 }])
 
-
-
 .controller('MiscController',['$scope', 'Product', '$routeParams', '$location', function ($scope, Product, $routeParams, $location){
     const id = $routeParams.id;
     

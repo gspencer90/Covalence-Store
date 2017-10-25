@@ -15,9 +15,19 @@ router.get("/", (req, res) => {
     });
 });
 
+router.route('/:id')
+.get((req, res) => {
+    procedures.read(req.params.id)
+    .then((product) => {
+        res.send(product)
+    }).catch((err) => {
+        console.log(err);
+        res.sendStatus(500);
+    });
+})
+
 router.get("/category/:categoryid", (req, res) => {
-  procedures
-    .getCategory(req.params.categoryid)
+  procedures.getCategory(req.params.categoryid)
     .then(products => {
       res.send(products);
     })

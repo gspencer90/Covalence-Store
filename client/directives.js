@@ -5,3 +5,9 @@ angular.module('store.directives', [])
 		restrict: 'E'
 	};
 }])
+.directive('mainFooter', [function() {
+	return {
+		templateUrl: 'directives/footer.html',
+		restrict: 'E'
+	};
+}])

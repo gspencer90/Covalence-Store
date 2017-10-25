@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'made_waffle_softextrabold';
+    src: url('fonts/made_waffle_soft_personal_use-webfont.woff2') format('woff2'),
+         url('fonts/made_waffle_soft_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	color: rgb(104, 104, 104);
+}
+
 /* Welcome Page Styles */
 #mainBackground {
 	height: 1084px;
@@ -10,20 +22,24 @@
 .welcomeMessage {
 	color: white;
 	font-size: 3em;
+	font-family: 'made_waffle_softextrabold', sans-serif;
 }
 
 #welcome {
 	margin-top: 200px;
-	margin-left: 300px;
+	margin-left: 250px;
+	
 }
 
 #startBtn {
 	margin-top: 15px;
-	width: 200px;
+	width: 220px;
 	height: 60px;
 	background-color: #07b5c6;
 	border: #07b5c6;
-	font-size: 1.3em;
+	font-size: 1.1em;
+	font-family: 'made_waffle_softextrabold', sans-serif;
+	letter-spacing: 2px;
 }
 
 /* Banner Styles */
@@ -46,10 +62,21 @@
 	background: rgba(27, 37, 40, 0.8);
 }
 
+#logo {
+	margin-right: 40px;
+}
+
 .nav-link {
 	color: #07b5c6;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	font-weight: bold;
+	margin-right: 50px;
+	letter-spacing: 3px;
+}
+
+#firstLink {
+	border-left: solid 2px #07b5c6;
+	padding-left: 40px;
 }
 
 .nav-link:hover {
@@ -94,7 +121,33 @@
 
 .product-details {
 	float: right;
-	margin-right: 500px;
+	margin-right: 200px;
 	margin-top: 50px;
+	width: 500px;
+	font-size: .9em;
+}
+
+#productPrice {
+	font-family: 'made_waffle_softextrabold', sans-serif;
+	color: #07b5c6;
+}
+
+#productTitle {
+	font-family: 'made_waffle_softextrabold', sans-serif;
+}
+
+li {
+	padding: 5px;
+	margin-left: -20px;
+}
+
+#cartBtn {
+	width: 300px;
+	height: 50px;
+	background-color: #07b5c6;
+	border: #07b5c6;
+	font-size: 1.3em;
+	font-family: 'made_waffle_softextrabold', sans-serif;
+	letter-spacing: 3px;
 }
 
