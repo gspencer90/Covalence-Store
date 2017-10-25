@@ -26,15 +26,4 @@ router.route('/:id')
     });
 })
 
-router.get("/category/:categoryid", (req, res) => {
-  procedures.getCategory(req.params.categoryid)
-    .then(products => {
-      res.send(products);
-    })
-    .catch(err => {
-      console.log(err);
-      res.sendStatus(500);
-    });
-});
-
 export default router;

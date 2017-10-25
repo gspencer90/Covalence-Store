@@ -28,14 +28,9 @@ angular.module('store.controllers', ['ngRoute'])
     })
 }])
 
-.controller('MiscController',['$scope', 'Product', '$routeParams', '$location', function ($scope, Product, $routeParams, $location){
-    const id = $routeParams.id;
-    
-    let products = Product.query();
-    let misc = products.filter(product => product.categoryid == '2');
-
-    console.log(misc);
-    console.log(products);
+.controller('MiscController',['$scope', 'Misc', 'Product','$routeParams', '$location', function ($scope, Misc, Product, $routeParams, $location){
+  
+    $scope.misc = Misc.query();
 
 }])
 

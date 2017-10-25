@@ -6,6 +6,12 @@ angular.module('store.factories', [])
 	})
 }])
 
+.factory('Misc',['$resource', function($resource){
+	return $resource('/api/misc',{
+		id: '@id'
+	})
+}])
+
 .factory('Category', ['$resource', function($resource){
 	return $resource('/api/categories/:id', {
 		id: '@id'
