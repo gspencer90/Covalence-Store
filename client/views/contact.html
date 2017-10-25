@@ -1,3 +1,20 @@
-<main-nav></main-nav>
+<main-nav active-page="'contact'"></main-nav>
+<div class="jumbotron jumbotron-fluid">
+    <h1>Contact Us</h1>
+</div>
+<form ng-submit="send()">
+    <div class="form-group container">
+        <label for="name">Name</label>
+        <input type="text" id="contact-name" class="form-control"required placeholder="Name">
+    </div>
+    <div class="form-group container">
+        <label for="email">Email Address</label>
+        <input type="email" id="contact-email" class="form-control" placeholder="Email Address">
+    </div>
+    <div class="form-group container">
+        <label for="message">Message</label>
+        <textarea type="text" id="contact-message" class="form-control" rows="3" placeholder="Write here..."></textarea>
+    </div>
+</form>
 
 <main-footer></main-footer>
