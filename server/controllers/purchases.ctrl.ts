@@ -1,22 +1,19 @@
-// import { Router } from 'express';
-// import * as stripeSvc from '../services/stripe.svc';
-
-// const router = Router();
-
-// router.post('/', (req, res) => {
-//     let amount = Number(req.body.amount);
-//     stripeSvc.charge(req.body.token, amount)
-//     .then((success) => {
-//         res.sendStatus(204);
-//     }).catch((err) => {
-//         console.log(err);
-//         res.sendStatus(500).send(err.message);
-//     })
-// });
 import * as express from 'express';
 import * as procedures from '../procedures/purchases.proc'
+import * as stripeSvc from '../services/stripe.svc';
 
 let router = express.Router();
+
+router.post('/', (req, res) => {
+    let amount = Number(req.body.amount);
+    stripeSvc.charge(req.body.token, amount)
+    .then((success) => {
+        res.sendStatus(204);
+    }).catch((err) => {
+        console.log(err);
+        res.sendStatus(500).send(err.message);
+    })
+});
 
 router.route('/')
     .post((req,res)=>{

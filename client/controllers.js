@@ -34,9 +34,24 @@ angular.module('store.controllers', ['ngRoute'])
     '$scope', 
     'Purchase', 
     '$location',
-    'stripe', function ($scope, Purchase, $location, stripe){
+    function ($scope, Purchase, $location){
     let elements = stripe.elements();
-    let card = elements.create("card");
+    let card = elements.create("card", {
+        style: {
+            base: {
+              iconColor: '#666EE8',
+              color: '#31325F',
+              lineHeight: '40px',
+              fontWeight: 300,
+              fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+              fontSize: '15px',
+        
+              '::placeholder': {
+                color: '#CFD7E0',
+              },
+            },
+          }
+    });
     card.mount('#card-field');
 
     $scope.purchase = function() {
