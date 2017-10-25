@@ -17,9 +17,18 @@ angular.module('store.factories', [])
 		id: '@id'
 	})
 }])
+// .factory('Category', ['$resource', function($resource){
+// 	return $resource('/api/categories/:id', {
+// 		id: '@id'
+// 	})
+// }])
 
 .factory('Purchase', ['$resource', function($resource) {
 	return $resource('/api/purchases/:id', {
 		id: '@id'
 	})
+}])
+
+.factory('Apparel', ['$resource', function($resource) {
+	return $resource('/api/apparel')
 }])
