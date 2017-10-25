@@ -26,18 +26,4 @@ router.route('/:id')
     });
 })
 
-<<<<<<< HEAD
-=======
-// router.get("/category/:categoryid", (req, res) => {
-//   procedures.getCategory()
-//     .then(products => {
-//       res.send(products);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.sendStatus(500);
-//     });
-// });
-
->>>>>>> 5c70aa79e57a4aa36fb0fd9e38668fca41846b3e
 export default router;
