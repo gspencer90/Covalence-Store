@@ -1,4 +1,3 @@
 node_modules
 variables
 server/**/*.js
-.DS_Store
