@@ -4,18 +4,9 @@ angular.module('store.controllers', ['ngRoute'])
     '$scope', 
     '$location', 
     '$resource',
-    'Categories',
-    'Product', function ($scope, $location, $resource, Categories, Product) {
-
-        // $scope.toApparel() = function() {
-        //     $location.path('/apparel');
-        // };
-        $scope.addToCart = function() {
-            
-        }
-
-        // $scope.products = Product.query();
-        $scope.products = Categories.query();
+    'Apparel',
+    'Product', function ($scope, $location, $resource, Apparel, Product) {
+        $scope.apparel = Apparel.query();
         $scope.addToCart = function() {
             // cache item to be added
         };

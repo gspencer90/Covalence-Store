@@ -8,7 +8,4 @@ export function read(id: number): Promise<models.IProduct> {
   return row("GetProduct", [id]);
 }
 
-export function getCategory()
- {
-  return rows("GetAllApparel");
-}
+

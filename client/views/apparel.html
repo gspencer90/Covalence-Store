@@ -3,11 +3,14 @@
 	<div class="container"></div>
 </div>
 </div>
+
 <div class="merch-container">
-	<figure id="" class="figure" ng-repeat="misc in miscs">
-		<img src="{{ product.imageurl }}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-		<figcaption class="figure-caption">{{ product.title }}</figcaption>
-		<figcaption class="figure-caption text-right" id="price">${{ product.price }}</figcaption>
+	<figure id="" class="figure" ng-repeat="apparel in apparel">
+		<a href="/apparel/{{ apparel.id }}">
+			<img src="{{ apparel.imageurl }}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+			<figcaption class="figure-caption">{{ apparel.title }}</figcaption>
+			<figcaption class="figure-caption text-right" id="price">${{ apparel.price }}</figcaption>
+		</a>
 	</figure>
 </div>
 <main-footer></main-footer>
