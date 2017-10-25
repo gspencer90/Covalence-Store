@@ -3,18 +3,19 @@ angular.module('store.controllers', ['ngRoute'])
 .controller('ApparelController', [
     '$scope', 
     '$location', 
-    '$resource', 
-    'Product', function ($scope, $location, $resource, Product) {
+    '$resource',
+    'Categories',
+    'Product', function ($scope, $location, $resource, Categories, Product) {
 
-        $scope.toApparel() = function() {
-            $location.path('/apparel');
-        };
+        // $scope.toApparel() = function() {
+        //     $location.path('/apparel');
+        // };
         $scope.addToCart = function() {
             
         }
 
         // $scope.products = Product.query();
-        let products = Products.query();
+        $scope.products = Categories.query();
         $scope.addToCart = function() {
             // cache item to be added
         };
