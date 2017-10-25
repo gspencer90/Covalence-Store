@@ -1,3 +1,46 @@
+@media screen and (max-width: 991px) {
+
+/* Single Page */
+	.col-sm-8 {
+		min-width: 100% !important;
+		height: auto !important;
+		margin: 20px !important;
+		margin-left: 10px !important;
+	}
+
+	.col-sm-4 {
+		margin-left: 10px !important;
+		min-width: 90% !important;
+		margin-top: 550px !important;
+	}
+
+	img
+	{
+		max-width: 100% !important;
+		min-width: 300px !important;
+		height: auto !important;
+	}
+
+	#logo {
+		margin-right: 0px !important;
+	}
+
+	#cartBtn {
+		margin-bottom: 20px;
+	}
+
+}
+
+@media screen and (max-width: 470px) {
+	.col-sm-4 {
+		margin-top: 420px !important;
+	}
+
+	#cartBtn {
+		margin-bottom: 20px;
+	}
+}
+
 @font-face {
     font-family: 'made_waffle_softextrabold';
     src: url('fonts/made_waffle_soft_personal_use-webfont.woff2') format('woff2'),
@@ -5,6 +48,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 
 body {
 	color: rgb(104, 104, 104);
@@ -35,7 +79,7 @@ body {
 	margin-top: 15px;
 	width: 220px;
 	height: 60px;
-	background-color: #07b5c6;
+	background-color: #07b5c4;
 	border: #07b5c6;
 	font-size: 1.1em;
 	font-family: 'made_waffle_softextrabold', sans-serif;
@@ -84,9 +128,13 @@ body {
 	transition: 0.5s;
 }
 
-.navbar-toggler {
-	color: white;
+.custom-toggler.navbar-toggler {
+    border-color: rgb(7, 181, 196);
 }
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(7, 181, 196)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 
 /* Merch Styles */
 .figure {
@@ -113,17 +161,15 @@ body {
 
 /* Single View Styles */
 
-.product-img {
-	float: left;
+.col-sm-8 {
 	margin-left: 100px;
 	margin-top: 50px;
+	position: absolute;
 }
 
-.product-details {
-	float: right;
-	margin-right: 200px;
+.col-sm-4 {
+	margin-left: 750px;
 	margin-top: 50px;
-	width: 500px;
 	font-size: .9em;
 }
 

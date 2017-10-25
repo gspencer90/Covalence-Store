@@ -1,21 +1,27 @@
 <main-nav></main-nav>
-<div class="product-img">
-	<img src=" {{ product.imageurl }}">
-</div>
-<div class="product-details">
-<h2 id="productPrice">{{ product.price | currency:undefined:0 }}</h2>
-<h3 id="productTitle">{{ product.title }}</h3>
-<p>{{ product.description }}</p>
-<p>Spicy jalapeno bacon ipsum dolor amet picanha magna strip steak doner laborum. 
-	Reprehenderit labore t-bone, burgdoggen landjaeger quis bacon ut aute jowl. Laboris 
-	landjaeger jowl dolore cupim pork belly burgdoggen. Andouille spare ribs nostrud 
-	adipisicing. Turkey tongue shoulder irure pork belly short ribs, leberkas nulla pastrami 
-	kevin ea aliquip prosciutto enim frankfurter.</p>
-<ul>
-	<li>Ham hamburger pancetta in, ut do dolore kielbasa esse in veniam ad sint ea filet mignon.</li>
-	<li>T-bone filet mignon aute doner frankfurter ullamco aliquip nulla turducken voluptate sausage.</li>
-	<li>Proident frankfurter velit salami picanha, spare ribs ullamco aliqua chicken elit short loin.</li>
-</ul>
-
-<button type="button" class="btn btn-primary" id="cartBtn">ADD TO CART</button>
-</div>
+<div class="row">
+	<div class="col-sm-8">
+		<div class="product-img">
+			<img src=" {{ product.imageurl }}" class="img-responsive">
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="product-details">
+			<h2 id="productPrice">{{ product.price | currency:undefined:0 }}</h2>
+			<h3 id="productTitle">{{ product.title }}</h3>
+			<p>{{ product.description }}</p>
+			<p>Spicy jalapeno bacon ipsum dolor amet picanha magna strip steak doner laborum. 
+				Reprehenderit labore t-bone, burgdoggen landjaeger quis bacon ut aute jowl. Laboris 
+				landjaeger jowl dolore cupim pork belly burgdoggen. Andouille spare ribs nostrud 
+				adipisicing. Turkey tongue shoulder irure pork belly short ribs, leberkas nulla pastrami 
+				kevin ea aliquip prosciutto enim frankfurter.</p>
+			<ul>
+				<li>Ham hamburger pancetta in, ut do dolore kielbasa esse in veniam ad sint ea filet mignon.</li>
+				<li>T-bone filet mignon aute doner frankfurter ullamco aliquip nulla turducken voluptate sausage.</li>
+				<li>Proident frankfurter velit salami picanha, spare ribs ullamco aliqua chicken elit short loin.</li>
+			</ul>
+			
+			<button type="button" class="btn btn-primary" id="cartBtn">ADD TO CART</button>
+			</div>
+	</div>
+  </div>
