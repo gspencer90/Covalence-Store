@@ -108,6 +108,13 @@ body {
 	margin-top: -70px;
 }
 
+#jumboContact {
+	background: url('images/contact.jpg') no-repeat fixed 0px -20px;
+	background-size: 1441px 500px;
+	height: 450px;
+	margin-top: -70px;
+}
+
 /* Nav Styles */
 .my-navbar {
 	background: rgba(27, 37, 40, 0.8);
@@ -204,3 +211,51 @@ li {
 	letter-spacing: 3px;
 }
 
+/* Contact Page Styles */
+
+#contactHeader {
+	color: white;
+	margin-top: 150px;
+	margin-left: 500px;
+	font-family: 'made_waffle_softextrabold', sans-serif;
+	font-size: 3.5em;
+	margin-bottom: -10px;
+}
+
+#contactP {
+	color: white;
+	margin-left: 600px;
+}
+
+#contact-name, #contact-email {
+	width: 400px;
+}
+
+#contact-message {
+	width: 500px;
+}
+
+.labels {
+	font-weight: bold;
+	text-align: center;
+}
+
+#contactBtn {
+	background-color: #07b5c6;
+	border: #07b5c6;
+	width: 200px;
+	height: 50px;
+	margin-left: 170px;
+	font-family: 'made_waffle_softextrabold', sans-serif;
+	letter-spacing: 3px;
+	font-size: 1.2em;
+}
+
+form {
+	margin-left: 250px;
+	margin-top: 50px;
+	background-color: #eee;
+	width: 550px;
+	height: 380px;
+	padding-top: 10px;
+}
