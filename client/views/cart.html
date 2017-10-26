@@ -1,80 +1,26 @@
 <main-nav active-page="'purchase'"></main-nav>
-<div class="jumbotron" id="jumboCart">
+<div class="jumbotron" id="jumboCart"></div>
+<div class="container">
+<h2>Shopping Cart</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Item ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span id="id">{{ product.id }}</span></td>
+            <td><span id="title">{{ product.title }}</span></td>
+            <td><span id="price">{{ product.price }}</span></td>
+            <td>$<span id="total"></span></td>
+
+        </tr>
+    </tbody>
+</table>
 </div>
 
-<div class="container">
-  <h2>Your Billing Address</h2>
-  <div class="container">
-    <form>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="First name">
-        </div>
-        <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Last name">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Company (Optional)">
-        </div>
-        <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Phone Number">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Street Address">
-        </div>
-        <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Street Address 2 (Optional)">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" placeholder="City" id="inputCity">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" placeholder="Zip Code" id="inputZip">
-        </div>
-      </div>
-    </form>
-  </div>
-  <h2>Payment Method</h2>
-  <div class="container">
-    <form ng-submit="purchase()">
-      <div class="form-group">
-        <label>
-          <span>Name</span>
-          <input name="cardholder-name" class="field" placeholder="Jane Doe" />
-        </label>
-        <label>
-          <span>Phone</span>
-          <input class="field" placeholder="(123) 456-7890" type="tel" />
-        </label>
-      </div>
-      <div class="form-row">
-          <label for="card-field">Credit Card</label>
-          <div id="card-field" class="form-control"></div>
-      </div>
-      <button type="submit">Pay ${{ total }}</button>
-      <div class="outcome">
-        <div class="error" role="alert"></div>
-        <div class="success">
-          Success! Your Stripe token is
-          <span class="token"></span>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
 <main-footer></main-footer>

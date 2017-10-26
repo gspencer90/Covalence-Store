@@ -30,6 +30,10 @@ angular.module('CovalenceStore', ['ngRoute', 'ngResource', 'store.controllers', 
 		templateUrl: 'views/cart.html',
 		controller: 'CartController'
 	})
+	.when('/checkout', {
+		templateUrl: 'views/checkout.html',
+		controller: 'CheckoutController'
+	})
 	.otherwise({
 		redirectTo: '/'
 	})

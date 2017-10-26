@@ -31,6 +31,18 @@ angular.module('store.controllers', ['ngRoute'])
 }])
 
 .controller('CartController', [
+    '$scope',
+    '$location',
+    function($scope, $location) {
+        let cartContents = [];
+        $scope.addToCart = function() {
+            localStorage.itemId = $scope.product.id;
+            
+        }
+    }
+])
+
+.controller('CheckoutController', [
     '$scope', 
     'Purchase', 
     '$location',
