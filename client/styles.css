@@ -65,7 +65,7 @@ body {
 
 .welcomeMessage {
 	color: white;
-	font-size: 3em;
+	font-size: 4.8em;
 	font-family: 'made_waffle_softextrabold', sans-serif;
 }
 
@@ -81,7 +81,7 @@ body {
 	height: 60px;
 	background-color: #07b5c4;
 	border: #07b5c6;
-	font-size: 1.1em;
+	font-size: 1.8em;
 	font-family: 'made_waffle_softextrabold', sans-serif;
 	letter-spacing: 2px;
 }
@@ -91,33 +91,38 @@ body {
 	background: url('images/covalence-store-apparel-hero.jpg') no-repeat fixed;
 	background-size: 1441px 500px;
 	height: 450px;
-	margin-top: -70px;
+	margin-top: -100px;
+	margin-bottom: 60px;
 }
 
 #jumboMisc {
-	background: url('images/covalence-store-misc-hero.jpg') no-repeat fixed 0px -20px;
+	background: url('images/covalence-store-misc-hero.jpg') no-repeat fixed 0px -30px;
 	background-size: 1441px 500px;
 	height: 450px;
-	margin-top: -70px;
+	margin-top: -100px;
+	margin-bottom: 60px;
 }
 
 #jumboCheckout {
 	background: url('images/shoppingcart3.jpg') no-repeat fixed 0px 40px;
 	background-size: 1441px 500px;
 	height: 450px;
-	margin-top: -70px;
+	margin-top: -100px;
+	margin-bottom: 60px;
 }
 
 #jumboContact {
 	background: url('images/contact.jpg') no-repeat fixed 0px -20px;
 	background-size: 1441px 500px;
 	height: 450px;
-	margin-top: -70px;
+	margin-top: -100px;
+	margin-bottom: 60px;
 }
 
 /* Nav Styles */
 .my-navbar {
 	background: rgba(27, 37, 40, 0.8);
+	height: 80px;
 }
 
 #logo {
@@ -126,7 +131,7 @@ body {
 
 .nav-link {
 	color: #07b5c6;
-	font-size: 1.2em;
+	font-size: 1.8em;
 	font-weight: bold;
 	margin-right: 50px;
 	letter-spacing: 3px;
@@ -149,6 +154,10 @@ body {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(7, 181, 196)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+#cartNav {
+	margin-left: 450px;
+}
+
 
 /* Merch Styles */
 .figure {
@@ -159,7 +168,7 @@ body {
 }
 
 .figure-caption {
-	font-size: 1.2em;
+	font-size: 1.8em;
 	font-weight: bold;
 }
 
@@ -169,7 +178,7 @@ body {
 }
 
 #price {
-	margin-top: -28px;
+	margin-top: -27px;
 	color: #07b5c6;
 }
 
@@ -184,16 +193,18 @@ body {
 .col-sm-4 {
 	margin-left: 750px;
 	margin-top: 50px;
-	font-size: .9em;
+	font-size: 1.4em;
 }
 
 #productPrice {
 	font-family: 'made_waffle_softextrabold', sans-serif;
 	color: #07b5c6;
+	font-size: 2em;
 }
 
 #productTitle {
 	font-family: 'made_waffle_softextrabold', sans-serif;
+	font-size: 1.7em;
 }
 
 li {
@@ -215,24 +226,27 @@ li {
 
 #header {
 	color: white;
-	margin-top: 150px;
+	margin-top: 170px;
 	margin-left: 500px;
 	font-family: 'made_waffle_softextrabold', sans-serif;
-	font-size: 3.5em;
+	font-size: 5em;
 	margin-bottom: -10px;
 }
 
 #contactP {
 	color: white;
-	margin-left: 600px;
+	margin-left: 580px;
+	font-size: 1.6em;
 }
 
 #contact-name, #contact-email {
-	width: 400px;
+	width: 500px;
+	font-size: .7em;
 }
 
 #contact-message {
 	width: 500px;
+	font-size: .7em;
 }
 
 .labels {
@@ -249,6 +263,7 @@ li {
 	font-family: 'made_waffle_softextrabold', sans-serif;
 	letter-spacing: 3px;
 	font-size: 1.2em;
+	margin-top: 25px;
 }
 
 form {
@@ -258,11 +273,21 @@ form {
 	width: 550px;
 	height: 380px;
 	padding-top: 10px;
+	font-size: 2em;
 }
 
 /* Apparel Page Styles */
 
 #apparelP {
 	color: white;
-	margin-left: 560px;
+	margin-left: 550px;
+	font-size: 1.6em;
+}
+
+/* Misc Page Styles */
+
+#miscP {
+	color: white;
+	margin-left: 535px;
+	font-size: 1.6em;
 }

@@ -17,6 +17,9 @@ angular.module('store.factories', [])
 		id: '@id'
 	})
 }])
+.factory('ContactForm',['$resource',function($resource){
+	return $resource('/api/contactforms/:id',{ id: '@id'})
+}])
 // .factory('Category', ['$resource', function($resource){
 // 	return $resource('/api/categories/:id', {
 // 		id: '@id'
