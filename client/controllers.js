@@ -6,7 +6,8 @@ angular
     "$resource",
     "Apparel",
     "Product",
-    function($scope, $location, $resource, Apparel, Product) {
+    "CartService",
+    function($scope, $location, $resource, Apparel, Product, CartService) {
       $scope.apparel = Apparel.query();
       $scope.addToCart = function() {
         // cache item to be added
@@ -17,23 +18,17 @@ angular
     "$scope",
     "Product",
     "$routeParams",
-    function($scope, Product, $routeParams) {
+    "CartService",
+    function($scope, Product, $routeParams, CartService) {
       $scope.product = Product.get({
         id: $routeParams.id
       });
       $scope.addToCart = function() {
-        let item = {};
-        let cartContents = [];
-        item.title = $scope.product.title;
-        item.price = $scope.product.price;
-        item.image = $scope.product.imageurl;
-        localStorage.setItem("item", JSON.stringify(item));
-        cartContents.push(item);
+        CartService.addItem($scope.product);
         alert('Your item has been added to the shopping cart!');
-        console.log(cartContents);
+      };
     }
-    }
-])
+  ])
   .controller("MiscController", [
     "$scope",
     "Misc",
@@ -65,13 +60,14 @@ angular
   .controller("CartController", [
     "$scope",
     "$location",
-    function($scope, $location) {
-        $scope.getCart = function($scope) {
-          JSON.parse(item);
-          $scope.product.title = item.title;
-          $scope.product.price = item.price;
-          $scope.product.imageurl = item.image;
-        };
+    "CartService",
+    function($scope, $location, CartService) {
+      CartService.getCart = function() {
+        let products = localStorage.getItem("cart");
+        console.log(products);
+        for (i = 0; i < cart.length; i++) {
+            $scope.products = cart[i];
+      }};
     }
   ])
   .controller("CheckoutController", [
