@@ -101,7 +101,7 @@ body {
 	margin-top: -70px;
 }
 
-#jumboCart {
+#jumboCheckout {
 	background: url('images/shoppingcart3.jpg') no-repeat fixed 0px 40px;
 	background-size: 1441px 500px;
 	height: 450px;
@@ -213,7 +213,7 @@ li {
 
 /* Contact Page Styles */
 
-#contactHeader {
+#header {
 	color: white;
 	margin-top: 150px;
 	margin-left: 500px;
@@ -258,4 +258,11 @@ form {
 	width: 550px;
 	height: 380px;
 	padding-top: 10px;
+}
+
+/* Apparel Page Styles */
+
+#apparelP {
+	color: white;
+	margin-left: 560px;
 }
