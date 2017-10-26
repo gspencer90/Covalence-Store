@@ -11,3 +11,9 @@ angular
     };
   }
 ])
+.service("CartService", [
+  "$rootScope",
+  function($rootScope) {
+    
+  }
+])
