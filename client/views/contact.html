@@ -5,19 +5,19 @@
 </div>
 <div class="container">
     <form ng-submit="send()">
-    <div class="form-group container top">
+    <!-- <div class="form-group container top">
         <label for="name" class="labels">Name</label>
         <input type="text" id="contact-name" class="form-control top" required placeholder="Name">
-    </div>
+    </div> -->
     <div class="form-group container">
         <label for="email" class="labels">Email Address</label>
-        <input type="email" id="contact-email" class="form-control top" required placeholder="Email Address">
+        <input type="email" id="contact-email" class="form-control top" required placeholder="Email Address" ng-model="email"/>
     </div>
     <div class="form-group container bottom">
         <label for="message" class="labels">Message</label>
-        <textarea type="text" id="contact-message" class="form-control" rows="3" placeholder="Write here..."></textarea>
+        <textarea type="text" id="contact-message" class="form-control" rows="3" placeholder="Write here..." ng-model="message"></textarea>
     </div>
-    <input type="submit" value="SEND" class="btn btn-primary" id="contactBtn">
+    <input type="submit" value="SEND" class="btn btn-primary" id="contactBtn"/>
 </form>
 </div>
 </div>

@@ -26,8 +26,18 @@ angular.module('store.controllers', ['ngRoute'])
 
 }])
 
-.controller('ContactController', ['$scope', function ($scope){
-	
+.controller('ContactController', ['$scope', 'ContactForm', function ($scope, ContactForm){
+	$scope.send = function(){
+        let contact = new ContactForm({
+            from: $scope.email,
+            message: $scope.message
+        });
+        contact.$save(function(){
+            alert('Thanks for your feedback!');
+        }), function(err){
+            console.log(err);
+        }
+    }
 }])
 
 .controller('CartController', [
