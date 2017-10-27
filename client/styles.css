@@ -291,3 +291,38 @@ form {
 	margin-left: 535px;
 	font-size: 1.6em;
 }
+
+.col {
+	margin-top: 50px;
+}
+
+.circle {
+	background-color: #07b5c6;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 43px;
+	color: white;
+	font-size: 2em;
+	font-family: 'made_waffle_softextrabold', sans-serif;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.checkoutHeader {
+	display: inline-block;
+	font-family: 'made_waffle_softextrabold', sans-serif;
+	margin-bottom: 20px;
+}
+
+#checkoutBtn {
+	width: 300px;
+	height: 50px;
+	background-color: #07b5c6;
+	border: #07b5c6;
+	font-size: 2em;
+	font-family: 'made_waffle_softextrabold', sans-serif;
+	letter-spacing: 3px;
+	color: white;
+}
