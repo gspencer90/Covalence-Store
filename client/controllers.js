@@ -62,8 +62,8 @@ angular
   .controller("CartController", [
     "$scope",
     "$location",
-    "CartService",
-    function($scope, $location, CartService) {
+    "CartService", "Purchase",
+    function($scope, $location, CartService, Purchase) {
       CartService.getCart = function() {
         let products = localStorage.getItem("cart");
         console.log(products);
@@ -71,12 +71,15 @@ angular
             $scope.products = cart[i];
       }};
     }
+
+    
   ])
   .controller("CheckoutController", [
     "$scope",
     "Purchase",
     "$location",
     function($scope, Purchase, $location) {
+
       let elements = stripe.elements();
       let card = elements.create("card", {
         style: {

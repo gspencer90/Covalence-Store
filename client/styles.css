@@ -271,7 +271,7 @@ form {
 	margin-top: 50px;
 	background-color: #eee;
 	width: 550px;
-	height: 380px;
+	height: 580px;
 	padding-top: 10px;
 	font-size: 2em;
 }
@@ -299,12 +299,12 @@ form {
 .circle {
 	background-color: #07b5c6;
 	border-radius: 50%;
-	height: 40px;
-	width: 40px;
+	height: 35px;
+	width: 35px;
 	text-align: center;
-	line-height: 43px;
+	line-height: 40px;
 	color: white;
-	font-size: 2em;
+	font-size: 1em;
 	font-family: 'made_waffle_softextrabold', sans-serif;
 	display: inline-block;
 	margin-right: 10px;
@@ -316,13 +316,60 @@ form {
 	margin-bottom: 20px;
 }
 
+.payMessage {
+	font-family: 'made_waffle_softextrabold', sans-serif;
+	font-size: .7em;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
 #checkoutBtn {
 	width: 300px;
 	height: 50px;
 	background-color: #07b5c6;
 	border: #07b5c6;
-	font-size: 2em;
+	font-size: 1em;
 	font-family: 'made_waffle_softextrabold', sans-serif;
 	letter-spacing: 3px;
 	color: white;
+	line-height: 50px;
+	margin-top: 10px;
+	margin-left: 100px;
+}
+
+.checkoutForm {
+	margin-left: 50px;
+	padding: 20px;
+}
+
+
+.form-control {
+	height: 2.3em;
+	font-size: .8em;
+}
+
+#inputState {
+	height: 2.3em;
+}
+
+.cartDiv {
+	width: 400px;
+	height: 579px;
+	background-color: #eee;
+	margin-top: 50px;
+
+}
+
+#cartHeader {
+	margin-left: 60px;
+	margin-top: 30px;
+}
+
+#cancelBtn {
+	margin-left: 100px;
+	height: 40px;
+	background-color: white;
+	color: #07b5c6;
+	border: white;
+	font-size: 1.2em;
 }
