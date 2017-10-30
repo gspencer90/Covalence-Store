@@ -66,18 +66,18 @@
     <div class="col">
       <div class="cartDiv">
         <h1 class="checkoutHeader" id="cartHeader">Your Shopping Cart</h2>
-          <div class="cart-container">
-            <div class="cart-figures" ng-repeat="item in items">
-              <img src="{{ item.imageurl }}" class="figure-img img-fluid rounded" alt="A summary of each item in shopping cart.">
-              <h5>Qty: x{{ item.quantity }}</h5>
-              <h3>{{ item.title }}</h3>
-              <h4>${{ item.price }}</h4>
-              <button ng-click="removeItem()">Remove Item</button>
-            </div>
-          </div>
           <a href="/apparel">
             <button type="button" class="btn btn-primary" id="cancelBtn">Cancel and continue shopping</button>
           </a>
+          <div class="cart-container">
+            <div class="cart-figures" ng-repeat="item in items">
+              <img src="{{ item.imageurl }}" class="figure-img img-fluid rounded cart-img" alt="A summary of each item in shopping cart.">
+              <h5 class="cartQty">Qty: x{{ item.quantity }}</h5><br>
+              <h3 class="cartTitle">{{ item.title }}</h3><br>
+              <h4 class="cartPrice">${{ item.price }}</h4><br>
+              <button ng-click="removeItem()">Remove Item</button>
+            </div>
+          </div>
       </div>
     </div>
   </div>
