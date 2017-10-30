@@ -14,7 +14,8 @@ angular
       $locationProvider.html5Mode(true);
       $routeProvider
         .when("/", {
-          templateUrl: "views/welcome.html"
+          templateUrl: "views/welcome.html",
+          controller: "WelcomeController"
         })
         .when("/apparel", {
           templateUrl: "views/apparel.html",

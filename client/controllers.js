@@ -1,5 +1,17 @@
 angular
   .module("store.controllers", ["ngRoute"])
+
+  .controller("WelcomeController", ["SEOService", "$location", function(SEOService, $location) {
+
+    SEOService.setSEO({
+      title: 'Covalence Store',
+      description: 'Welcome to the Covalence Store!',
+      url: $location.url()
+
+  });
+
+  }])
+
   .controller("ApparelController", [
     "$scope",
     "$location",
@@ -7,11 +19,19 @@ angular
     "Apparel",
     "Product",
     "CartService",
-    function($scope, $location, $resource, Apparel, Product, CartService) {
+    "SEOService",
+    function($scope, $location, $resource, Apparel, Product, CartService, SEOService) {
       $scope.apparel = Apparel.query();
       $scope.addToCart = function() {
         // cache item to be added
       };
+
+      SEOService.setSEO({
+        title: 'Covalence || Apparel',
+        description: 'Give your wardrobe an upgrade!',
+        url: $location.url()
+  
+    });
     }
   ])
   .controller("SingleController", [
@@ -35,15 +55,24 @@ angular
     "Product",
     "$routeParams",
     "$location",
-    function($scope, Misc, Product, $routeParams, $location) {
+    "SEOService",
+    function($scope, Misc, Product, $routeParams, $location, SEOService) {
       $scope.misc = Misc.query();
+
+      SEOService.setSEO({
+        title: 'Covalence || Misc',
+        description: "Stuff you didn't even know you needed",
+        url: $location.url()
+  
+    });
     }
   ])
 
   .controller("ContactController", [
     "$scope",
     "ContactForm",
-    function($scope, ContactForm) {
+    "SEOService",
+    function($scope, ContactForm, SEOService) {
       $scope.send = function() {
         let contact = new ContactForm({
           from: $scope.email,
@@ -56,37 +85,32 @@ angular
             console.log(err);
           };
       };
+
+      SEOService.setSEO({
+        title: 'Covalence || Contact',
+        description: "Let's keep in touch!",
+        url: $location.url()
+  
+    });
     }
   ])
 
-  .controller("CartController", [
-    "$scope",
-    "$location",
-    "CartService", "Purchase",
-    function($scope, $location, CartService, Purchase) {
+  .controller("CartController", ["$scope", "$location", "CartService", "Purchase", "SEOService", function($scope, $location, CartService, Purchase, SEOService) {
       CartService.getCart = function() {
         let products = localStorage.getItem("cart");
         console.log(products);
         for (i = 0; i < cart.length; i++) {
             $scope.products = cart[i];
-      }};
-    }
-
+      }
+    };
     
-  ])
-  .controller("CheckoutController", [
-    "$scope",
-    "Purchase",
-    "$location",
-    function($scope, Purchase, $location) {
-
       let elements = stripe.elements();
       let card = elements.create("card", {
         style: {
           base: {
             iconColor: "#666EE8",
             color: "#31325F",
-            lineHeight: "40px",
+            lineHeight: "25px",
             fontWeight: 300,
             fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
             fontSize: "15px",
@@ -123,5 +147,12 @@ angular
           }
         });
       };
+
+      SEOService.setSEO({
+        title: 'Covalence || Cart',
+        description: 'Enjoy your purchase!',
+        url: $location.url()
+  
+    });
     }
 ]);
