@@ -41,8 +41,10 @@ angular
         }
         return -1;
       }
-      this.removeItem = function() {
-        //
+      this.removeItem = function(id) {
+        cartItems = cartItems.filter(function(product) {
+          return product.id !== id;
+        })
       };
     }
   ]);

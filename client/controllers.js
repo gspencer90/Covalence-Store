@@ -70,10 +70,18 @@ angular
       } else {
         $scope.items = JSON.parse(localStorage.getItem("cart"));
         console.log($scope.items);
+      };
+
+      $scope.removeItem = function() {
+        alert("Are you sure you want to remove this item?");
+        $scope.items = JSON.parse(localStorage("cart"));
+        if ($scope.items.quantity == "1") {
+          // delete from cart all together
+        } else {
+          $scope.items.quantity = $scope.items.quantity - 1;
+        }
       }
     }
-
-    
   ])
   .controller("CheckoutController", [
     "$scope",
