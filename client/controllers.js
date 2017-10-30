@@ -95,15 +95,20 @@ angular
     }
   ])
 
-  .controller("CartController", ["$scope", "$location", "CartService", "Purchase", "SEOService", function($scope, $location, CartService, Purchase, SEOService) {
-      CartService.getCart = function() {
-        let products = localStorage.getItem("cart");
-        console.log(products);
-        for (i = 0; i < cart.length; i++) {
-            $scope.products = cart[i];
+  .controller("CartController", [
+    "$scope",
+    "$location",
+    "CartService", 
+    "Purchase",
+    "SEOService",
+    function($scope, $location, CartService, Purchase, SEOService) {
+      if (localStorage.getItem("cart" === '')) {
+        console.log("No items in cart")
+      } else {
+        $scope.items = JSON.parse(localStorage.getItem("cart"));
+        console.log($scope.items);
       }
-    };
-    
+
       let elements = stripe.elements();
       let card = elements.create("card", {
         style: {

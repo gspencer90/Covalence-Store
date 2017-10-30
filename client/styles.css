@@ -386,5 +386,10 @@ li {
 	font-size: 1.2em;
 }
 
-/* Popout Styles */
+/* Shopping Cart Styles */
+
+.cart-figures {
+	height: 50px;
+	width: 100px;
+}
 

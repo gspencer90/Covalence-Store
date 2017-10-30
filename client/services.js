@@ -17,8 +17,8 @@ angular
         if (localStorage.getItem("cart") === null) {
           localStorage.setItem("cart", JSON.stringify([]));
         }
-        console.log(localStorage.getItem("cart"))
-        return JSON.parse(localStorage.getItem("cart"));        
+        console.log(localStorage.getItem("cart"));
+        return JSON.parse(localStorage.getItem("cart"));
       };
       this.addItem = function(item) {
         let list = this.getCart();
@@ -29,9 +29,9 @@ angular
         } else {
           list[index].quantity = list[index].quantity + 1;
         }
-        console.log(list)
+        // console.log(list)
         localStorage.setItem("cart", JSON.stringify(list));
-        console.log(localStorage.setItem("cart", JSON.stringify(list)));
+        // console.log(localStorage.setItem("cart", JSON.stringify(list)));
       };
       function indexOf(item, list) {
         for (let i = 0; i < list.length; i++) {
@@ -40,9 +40,9 @@ angular
           }
         }
         return -1;
-      };
-      this.removeItem = function(){
-        // 
       }
+      this.removeItem = function() {
+        //
+      };
     }
   ]);
