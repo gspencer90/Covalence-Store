@@ -62,14 +62,15 @@ angular
   .controller("CartController", [
     "$scope",
     "$location",
-    "CartService", "Purchase",
+    "CartService", 
+    "Purchase",
     function($scope, $location, CartService, Purchase) {
-      CartService.getCart = function() {
-        let products = localStorage.getItem("cart");
-        console.log(products);
-        for (i = 0; i < cart.length; i++) {
-            $scope.products = cart[i];
-      }};
+      if (localStorage.getItem("cart" === '')) {
+        console.log("No items in cart")
+      } else {
+        $scope.items = JSON.parse(localStorage.getItem("cart"));
+        console.log($scope.items);
+      }
     }
 
     
